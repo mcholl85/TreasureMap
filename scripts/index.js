@@ -13,15 +13,18 @@ const handleChangeFile = (e) => {
 
     reader.onload = (evt) => {
       const inputFile = evt.target.result;
-      const game = GameFactory.create(inputFile);
-      game.playGame();
-      preview.innerText = game.output();
+
+      try {
+        const game = GameFactory.create(inputFile);
+        game.play();
+        preview.innerText = game.output();
+      } catch (error) {
+        preview.innerText = error;
+      }
     };
 
     reader.readAsText(file);
   }
 };
 
-const input = document
-  .getElementById("input")
-  .addEventListener("change", handleChangeFile);
+document.getElementById("input").addEventListener("change", handleChangeFile);

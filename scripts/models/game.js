@@ -105,7 +105,7 @@ export default class Game {
     player.removeFirstMove();
   }
 
-  playGame() {
+  play() {
     while (!this.gameIsOver()) {
       this.players.forEach((player) => {
         this.movePlayer(player);
