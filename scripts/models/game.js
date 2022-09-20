@@ -80,7 +80,7 @@ export default class Game {
     const coordY = parseInt(y, 10);
 
     if (!this.card.caseExist(coordX, coordY)) {
-      throw Error("Mountain is out of the map");
+      throw Error("Player is out of the map");
     }
 
     const playerCase = this.card.getCase(coordX, coordY);
@@ -117,7 +117,7 @@ export default class Game {
     return this.players.every((player) => player.hasNoMove());
   }
 
-  treasureNotFound() {
+  treasuresRemaining() {
     return this.treasures.filter((treasure) => treasure.quantity > 0);
   }
 
@@ -131,7 +131,7 @@ export default class Game {
     results +=
       "# {T comme Trésor} - {Axe horizontal} - {Axe vertical} - {Nb. de trésors restants}\n";
 
-    this.treasureNotFound().forEach((treasure) => {
+    this.treasuresRemaining().forEach((treasure) => {
       results += treasure.print();
     });
 

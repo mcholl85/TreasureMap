@@ -56,7 +56,7 @@ export default class Player {
         }
         return { x: this.x, y: this.y + 1 };
       default:
-        return new Error("Wrong Orientation");
+        throw Error("Wrong Orientation");
     }
   }
 
@@ -88,11 +88,11 @@ export default class Player {
         break;
       case "E":
         if (this.nextMove === "G") {
-          this.orientation = "S";
+          this.orientation = "N";
           break;
         }
         if (this.nextMove === "D") {
-          this.orientation = "N";
+          this.orientation = "S";
           break;
         }
         break;
@@ -107,7 +107,7 @@ export default class Player {
         }
         break;
       default:
-        Error("Wrong orientation");
+        throw Error("Wrong orientation");
     }
   }
 

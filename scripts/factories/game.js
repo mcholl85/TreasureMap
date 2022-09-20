@@ -5,7 +5,11 @@ export default class GameFactory {
     const game = new Game();
     const cmdLines = input.split("\n");
 
-    cmdLines.forEach((cmdLine) => {
+    const cmdLinesWithoutComment = cmdLines.filter(
+      (cmdLine) => !cmdLine.startsWith("#")
+    );
+
+    cmdLinesWithoutComment.forEach((cmdLine) => {
       const cmds = cmdLine.split(" - ");
       const [firstCmd, ...params] = cmds;
 
@@ -22,10 +26,8 @@ export default class GameFactory {
         case "A":
           game.addPlayer(params);
           break;
-        case "#":
-          break;
         default:
-          Error("Wrong first letters");
+          throw Error(`Wrong first letters`);
       }
     });
     return game;

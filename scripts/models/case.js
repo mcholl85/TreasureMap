@@ -18,6 +18,10 @@ export default class Case {
       throw Error("A player is already on this case");
     }
 
+    if (this.mountain) {
+      throw Error("You can't put a player on a mountain");
+    }
+
     this.player = player;
 
     if (this.treasure) {
@@ -32,7 +36,7 @@ export default class Case {
 
   setTreasure(treasure) {
     if (this.hasMountain()) {
-      throw Error("You can not put a treasure on a mountain");
+      throw Error("You can't put a treasure on a mountain");
     }
     if (this.treasure) {
       throw Error("This case has already a treasure");
