@@ -1,5 +1,10 @@
 import GameFactory from "../factories/game.js";
-
+/**
+ * Function to import file configuration
+ * @function
+ * @param {ChangeEvent} e Event
+ * @return {void}
+ */
 const handleChangeFile = (e) => {
   const preview = document.getElementById("output");
   const file = document.getElementById("input").files[0];

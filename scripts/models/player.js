@@ -1,4 +1,15 @@
-export default class Player {
+/**
+ * Class representing a Player
+ */
+class Player {
+  /**
+   * Create a Player
+   * @param {string} name - Player's name
+   * @param {number} x - X-axis
+   * @param {number} y - Y-axis
+   * @param {string} orientation List of orientation S, N, E or O
+   * @param {string} move - List of move A D or G
+   */
   constructor(name, x, y, orientation, move) {
     this.name = name;
     this.x = x;
@@ -8,19 +19,35 @@ export default class Player {
     this.treasureFound = 0;
   }
 
+  /**
+   * Function to incremente the treasureFound's number
+   */
   foundTreasure() {
     this.treasureFound += 1;
   }
 
+  /**
+   * Set the new player's coordinates
+   * @param {number} x - X-axis
+   * @param {number} y - Y-axis
+   */
   setNewCoordinates(x, y) {
     this.x = x;
     this.y = y;
   }
 
+  /**
+   * Function to print Player's params
+   * @returns {string}
+   */
   print() {
     return `A - ${this.name} - ${this.x} - ${this.y} - ${this.orientation} - ${this.treasureFound}\n`;
   }
 
+  /**
+   * Function to return the new coordinates according to the orientation and the movement
+   * @returns {Object<string>}
+   */
   get nextCoordinates() {
     switch (this.orientation) {
       case "S":
@@ -60,10 +87,17 @@ export default class Player {
     }
   }
 
+  /**
+   * Function that return the first element of move's array
+   * @returns {string}
+   */
   get nextMove() {
     return this.move[0];
   }
 
+  /**
+   * Set the new orientation according to the actual orientation and the next movement
+   */
   changeOrientation() {
     switch (this.orientation) {
       case "S":
@@ -111,11 +145,20 @@ export default class Player {
     }
   }
 
+  /**
+   * Remove the first element of move's array
+   */
   removeFirstMove() {
     this.move.shift();
   }
 
+  /**
+   * Check if the player can't move, property move is empty
+   * @returns {boolean}
+   */
   hasNoMove() {
     return this.move.length === 0;
   }
 }
+
+export default Player;

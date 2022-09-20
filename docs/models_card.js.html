@@ -1,0 +1,201 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> models/card.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">TreasureMap</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Classes</h3><ul><li><a href="Card.html">Card</a></li><li><a href="Case.html">Case</a></li><li><a href="Game.html">Game</a></li><li><a href="GameFactory.html">GameFactory</a></li><li><a href="Mountain.html">Mountain</a></li><li><a href="Player.html">Player</a></li><li><a href="Treasure.html">Treasure</a></li></ul><h3>Global</h3><ul><li><a href="global.html#handleChangeFile">handleChangeFile</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>models/card.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import Case from "./case.js";
+
+/**
+ * Class representing a Map
+ */
+class Card {
+  /**
+   * Create a map with array of Cases
+   * @param {number} width - the map's width
+   * @param {number} height - the map's height
+   */
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+    this.cases = [];
+
+    for (let x = 0; x &lt; width; x += 1) {
+      this.cases.push([]);
+      for (let y = 0; y &lt; height; y += 1) {
+        this.cases[x].push(new Case());
+      }
+    }
+  }
+
+  /**
+   * Get the object Case with the coordinates x &amp; y
+   * @param {number} x - X-axis
+   * @param {number} y - Y-axis
+   * @returns {Object&lt;Case>}
+   */
+  getCase(x, y) {
+    if (!this.caseExist(x, y)) {
+      throw Error("Case does not exist");
+    }
+    return this.cases[x][y];
+  }
+
+  /**
+   * Check if a case exists with this coordinates
+   * @param {number} x - X-axis
+   * @param {number} y - Y-axis
+   * @returns {boolean}
+   */
+  caseExist(x, y) {
+    return !!this.cases[x] &amp;&amp; !!this.cases[x][y];
+  }
+
+  /**
+   * Get the case where the player is
+   * @param {Object&lt;Player>} player
+   * @returns {Object&lt;Case>}
+   */
+  getPlayerCase(player) {
+    return this.cases[player.x][player.y];
+  }
+
+  /**
+   * Check if the player can move on this coordinates
+   * @param {number} x - X-axis
+   * @param {number} y - Y-axis
+   * @returns {boolean}
+   */
+  playerCanMoveOnCase(x, y) {
+    return (
+      this.caseExist(x, y) &amp;&amp;
+      !this.getCase(x, y).hasPlayer() &amp;&amp;
+      !this.getCase(x, y).hasMountain()
+    );
+  }
+
+  /**
+   * Function to print Card's params
+   * @returns {string}
+   */
+  print() {
+    return `C - ${this.width} - ${this.height}\n`;
+  }
+}
+
+export default Card;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

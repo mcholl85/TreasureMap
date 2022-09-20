@@ -1,74 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1663707785959" clover="3.2.0">
-  <project timestamp="1663707785959" name="All files">
+<coverage generated="1663711910671" clover="3.2.0">
+  <project timestamp="1663711910671" name="All files">
     <metrics statements="246" coveredstatements="245" conditionals="128" coveredconditionals="127" methods="57" coveredmethods="57" elements="431" coveredelements="429" complexity="0" loc="246" ncloc="246" packages="3" files="9" classes="9"/>
     <package name="factories">
       <metrics statements="18" coveredstatements="18" conditionals="5" coveredconditionals="5" methods="3" coveredmethods="3"/>
       <file name="game.js" path="/Users/matthieuchollet/Projets Perso/TreasureMap/scripts/factories/game.js">
         <metrics statements="18" coveredstatements="18" conditionals="5" coveredconditionals="5" methods="3" coveredmethods="3"/>
-        <line num="5" count="4" type="stmt"/>
-        <line num="6" count="4" type="stmt"/>
-        <line num="8" count="4" type="stmt"/>
-        <line num="9" count="27" type="stmt"/>
         <line num="12" count="4" type="stmt"/>
-        <line num="13" count="19" type="stmt"/>
-        <line num="14" count="19" type="stmt"/>
-        <line num="16" count="19" type="cond" truecount="5" falsecount="0"/>
-        <line num="18" count="3" type="stmt"/>
-        <line num="19" count="3" type="stmt"/>
-        <line num="21" count="6" type="stmt"/>
-        <line num="22" count="6" type="stmt"/>
-        <line num="24" count="6" type="stmt"/>
-        <line num="25" count="6" type="stmt"/>
-        <line num="27" count="3" type="stmt"/>
-        <line num="28" count="3" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="33" count="3" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="16" count="27" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="19" type="stmt"/>
+        <line num="21" count="19" type="stmt"/>
+        <line num="23" count="19" type="cond" truecount="5" falsecount="0"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="28" count="6" type="stmt"/>
+        <line num="29" count="6" type="stmt"/>
+        <line num="31" count="6" type="stmt"/>
+        <line num="32" count="6" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="40" count="3" type="stmt"/>
       </file>
     </package>
     <package name="models">
       <metrics statements="175" coveredstatements="175" conditionals="81" coveredconditionals="80" methods="43" coveredmethods="43"/>
       <file name="card.js" path="/Users/matthieuchollet/Projets Perso/TreasureMap/scripts/models/card.js">
         <metrics statements="14" coveredstatements="14" conditionals="7" coveredconditionals="7" methods="6" coveredmethods="6"/>
-        <line num="5" count="12" type="stmt"/>
-        <line num="6" count="12" type="stmt"/>
-        <line num="7" count="12" type="stmt"/>
-        <line num="9" count="12" type="stmt"/>
-        <line num="10" count="49" type="stmt"/>
-        <line num="11" count="49" type="stmt"/>
-        <line num="12" count="227" type="stmt"/>
-        <line num="18" count="87" type="cond" truecount="2" falsecount="0"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="21" count="86" type="stmt"/>
-        <line num="25" count="145" type="cond" truecount="2" falsecount="0"/>
-        <line num="29" count="25" type="stmt"/>
-        <line num="33" count="25" type="stmt"/>
-        <line num="41" count="3" type="stmt"/>
+        <line num="13" count="12" type="stmt"/>
+        <line num="14" count="12" type="stmt"/>
+        <line num="15" count="12" type="stmt"/>
+        <line num="17" count="12" type="stmt"/>
+        <line num="18" count="49" type="stmt"/>
+        <line num="19" count="49" type="stmt"/>
+        <line num="20" count="227" type="stmt"/>
+        <line num="32" count="87" type="cond" truecount="2" falsecount="0"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="35" count="86" type="stmt"/>
+        <line num="45" count="145" type="cond" truecount="2" falsecount="0"/>
+        <line num="54" count="25" type="stmt"/>
+        <line num="64" count="25" type="stmt"/>
+        <line num="76" count="3" type="stmt"/>
       </file>
       <file name="case.js" path="/Users/matthieuchollet/Projets Perso/TreasureMap/scripts/models/case.js">
         <metrics statements="22" coveredstatements="22" conditionals="12" coveredconditionals="12" methods="7" coveredmethods="7"/>
-        <line num="3" count="227" type="stmt"/>
-        <line num="4" count="227" type="stmt"/>
-        <line num="5" count="227" type="stmt"/>
-        <line num="9" count="9" type="cond" truecount="2" falsecount="0"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="13" count="8" type="stmt"/>
-        <line num="17" count="29" type="cond" truecount="2" falsecount="0"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="21" count="28" type="cond" truecount="2" falsecount="0"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="25" count="27" type="stmt"/>
-        <line num="27" count="27" type="cond" truecount="2" falsecount="0"/>
-        <line num="28" count="6" type="stmt"/>
-        <line num="29" count="6" type="stmt"/>
-        <line num="34" count="18" type="stmt"/>
-        <line num="38" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="227" type="stmt"/>
+        <line num="13" count="227" type="stmt"/>
+        <line num="14" count="227" type="stmt"/>
+        <line num="22" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="26" count="8" type="stmt"/>
+        <line num="34" count="29" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="38" count="28" type="cond" truecount="2" falsecount="0"/>
         <line num="39" count="1" type="stmt"/>
-        <line num="41" count="9" type="cond" truecount="2" falsecount="0"/>
-        <line num="42" count="1" type="stmt"/>
-        <line num="44" count="8" type="stmt"/>
-        <line num="48" count="19" type="stmt"/>
-        <line num="52" count="29" type="stmt"/>
+        <line num="42" count="27" type="stmt"/>
+        <line num="44" count="27" type="cond" truecount="2" falsecount="0"/>
+        <line num="45" count="6" type="stmt"/>
+        <line num="46" count="6" type="stmt"/>
+        <line num="54" count="18" type="stmt"/>
+        <line num="62" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="65" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="66" count="1" type="stmt"/>
+        <line num="68" count="8" type="stmt"/>
+        <line num="76" count="19" type="stmt"/>
+        <line num="84" count="29" type="stmt"/>
       </file>
       <file name="game.js" path="/Users/matthieuchollet/Projets Perso/TreasureMap/scripts/models/game.js">
         <metrics statements="66" coveredstatements="66" conditionals="18" coveredconditionals="18" methods="16" coveredmethods="16"/>
@@ -141,9 +141,9 @@
       </file>
       <file name="mountain.js" path="/Users/matthieuchollet/Projets Perso/TreasureMap/scripts/models/mountain.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="3" count="9" type="stmt"/>
-        <line num="4" count="9" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
+        <line num="11" count="9" type="stmt"/>
+        <line num="12" count="9" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
       </file>
       <file name="player.js" path="/Users/matthieuchollet/Projets Perso/TreasureMap/scripts/models/player.js">
         <metrics statements="65" coveredstatements="65" conditionals="42" coveredconditionals="42" methods="9" coveredmethods="9"/>
@@ -215,32 +215,32 @@
       </file>
       <file name="treasure.js" path="/Users/matthieuchollet/Projets Perso/TreasureMap/scripts/models/treasure.js">
         <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
-        <line num="9" count="7" type="cond" truecount="1" falsecount="1"/>
-        <line num="13" count="3" type="stmt"/>
+        <line num="12" count="10" type="stmt"/>
+        <line num="13" count="10" type="stmt"/>
+        <line num="14" count="10" type="stmt"/>
+        <line num="21" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="29" count="3" type="stmt"/>
       </file>
     </package>
     <package name="utils">
       <metrics statements="53" coveredstatements="52" conditionals="42" coveredconditionals="42" methods="11" coveredmethods="11"/>
       <file name="handleChangeFile.js" path="/Users/matthieuchollet/Projets Perso/TreasureMap/scripts/utils/handleChangeFile.js">
         <metrics statements="15" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="7" count="2" type="cond" truecount="4" falsecount="0"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="12" count="2" type="cond" truecount="4" falsecount="0"/>
         <line num="13" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
       </file>
       <file name="validation.js" path="/Users/matthieuchollet/Projets Perso/TreasureMap/scripts/utils/validation.js">
         <metrics statements="38" coveredstatements="38" conditionals="38" coveredconditionals="38" methods="9" coveredmethods="9"/>

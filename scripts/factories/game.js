@@ -1,6 +1,13 @@
 import Game from "../models/game.js";
-
-export default class GameFactory {
+/**
+ * Class to create an object Game
+ */
+class GameFactory {
+  /**
+   * convert a string to an object Game
+   * @param {string} input - The string containing Game's params
+   * @returns {Object<Game>} A Game object
+   */
   static create(input) {
     const game = new Game();
     const cmdLines = input.split("\n");
@@ -33,3 +40,5 @@ export default class GameFactory {
     return game;
   }
 }
+
+export default GameFactory;
